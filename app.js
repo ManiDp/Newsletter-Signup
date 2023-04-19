@@ -49,14 +49,14 @@ app.post("/",function(req,res){
     
     const options={
         method: "POST",
-        auth: "Mani:daec23613a63384905afdbc95c80868a-u21"
+        auth: "Mani:6bdfdb63f44c429a56816255be8c7ba2-us21"
     }
 
     const request = https.request(url,options,function(response){
         if(response.statusCode === 200){
             res.sendFile(__dirname+"/success.html");
         }else{
-            res.sendFile(__dirname+"/failure.html");
+            // res.sendFile(__dirname+"/failure.html");
         }
         response.on("data",function(data){
             console.log(JSON.parse(data).status);
@@ -68,7 +68,7 @@ app.post("/",function(req,res){
 });
 
 // API Keys
-// daec23613a63384905afdbc95c80868a-us21
+// 6bdfdb63f44c429a56816255be8c7ba2-us21
 
 // List ID
 // 90390b2a72
